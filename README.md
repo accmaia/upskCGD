@@ -1,18 +1,18 @@
 # Projeto upskCGD 
 ### Preparação estágio NTTDATA
 
-##Indíce
+## Indíce
 
 1. [Objetivos](#Objetivos)
 2. [Tecnologias](#Tecnologias)
 3. [Descrição](#Descrição)
 
 
-##Objetivos
+## Objetivos
 
 Utilizar todas as tecnologias presentes nas ferramentas de formação disponibilizadas pela NTT DATA num único projeto em grupo para consolidar conceitos e praticar. O projeto irá consistir em desevolver uma webapp que diponibiliza serviços SOAP e consome serviços REST do petAPI. A webapp vai servir de intermediário e o objeto é abstrair o utilizar da "complexidade" da comunicação com o servidor do petAPI.
 
-##Tecnologias 
+## Tecnologias 
 
 Tecnologias ou frameworks com que ambicionamos trabalhar neste projeto.
 
@@ -28,9 +28,16 @@ Tecnologias ou frameworks com que ambicionamos trabalhar neste projeto.
 10. REST
 11. SOAP
 
-##Descrição
+## Descrição
 
+A webapp vai correr localmente. Vai ter três url aceites: 
 
+"/" - index
+"/criar" - criação de pets
+"/consulta" - consulta e edição de pets conhecidos
 
+Os id's dos pets criado dentro da aplicação vão se guardados na H2 Database, sempre que for necessário construir os pets ou ler id's é preciso aceder à base de dados, nunca guardamos os objetos criados. 
+
+Index - vai apresentar dados estatiscos, por exemplo: nome mais comum, categoria mais comum
 
 (...)
