@@ -6,16 +6,16 @@ Utilizar todas as tecnologias presentes nas ferramentas de formação disponibil
 
 Tecnologia que queremos utilizar
 
-|Java 1.8|
-|Spring Web|
-|ThymeLeaf|
-|JPA Repositories|
-|H2 Database|
-|JavaScript|
-|HTML|
-|CSS|
-|Jquery|
-|REST|
-|SOAP|
+1. Java 1.8
+2. Spring Web
+3. ThymeLeaf
+4. JPA Repositories
+5. H2 Database
+6. JavaScript
+7. HTML
+8. CSS
+9. Jquery
+10. REST
+11. SOAP
 
 (...)
