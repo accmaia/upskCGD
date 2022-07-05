@@ -32,12 +32,16 @@ Tecnologias ou frameworks com que ambicionamos trabalhar neste projeto.
 
 A webapp vai correr localmente. Vai ter três url aceites: 
 
-"/" - index
-"/criar" - criação de pets
-"/consulta" - consulta e edição de pets conhecidos
+"/" - index <br />
+"/criar" - criação de pets <br />
+"/consulta" - consulta e edição de pets conhecidos <br />
 
-Os id's dos pets criado dentro da aplicação vão se guardados na H2 Database, sempre que for necessário construir os pets ou ler id's é preciso aceder à base de dados, nunca guardamos os objetos criados. 
+Os id's dos pets criado dentro da aplicação vão se guardados na H2 Database, sempre que for necessário construir os pets ou ler id's é preciso aceder à base de dados, nunca guardamos os Pet criados, em contrapartida as Category e Tag criada vão ter que estar gravadas em memória. 
 
-Index - vai apresentar dados estatiscos, por exemplo: nome mais comum, categoria mais comum
+Index - vai apresentar dados estatiscos, por exemplo: nome mais comum, categoria mais comum, etc
+
+Criar - menu de criação de pets, categories e tags
+
+Consulta - permite a consulta e edição dos pets, categories e tags selecionados
 
 (...)
