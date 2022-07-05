@@ -1,10 +1,20 @@
 # Projeto upskCGD 
 ### Preparação estágio NTTDATA
 
-Objetivo:
+##Indíce
+
+1. [Objetivos](#Objetivos)
+2. [Tecnologias](#Tecnologias)
+3. [Descrição](#Descrição)
+
+
+##Objetivos
+
 Utilizar todas as tecnologias presentes nas ferramentas de formação disponibilizadas pela NTT DATA num único projeto em grupo para consolidar conceitos e praticar. O projeto irá consistir em desevolver uma webapp que diponibiliza serviços SOAP e consome serviços REST do petAPI. A webapp vai servir de intermediário e o objeto é abstrair o utilizar da "complexidade" da comunicação com o servidor do petAPI.
 
-Tecnologia que queremos utilizar
+##Tecnologias 
+
+Tecnologias ou frameworks com que ambicionamos trabalhar neste projeto.
 
 1. Java 1.8
 2. Spring Web
@@ -17,5 +27,10 @@ Tecnologia que queremos utilizar
 9. Jquery
 10. REST
 11. SOAP
+
+##Descrição
+
+
+
 
 (...)
