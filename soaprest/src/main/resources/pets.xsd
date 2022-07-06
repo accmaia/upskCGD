@@ -5,7 +5,7 @@
     <xs:element name="getPetRequest">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="pet" type="tns:pet"/>
+                <xs:element name="pet" type="tns:Pet"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
@@ -18,23 +18,77 @@
         </xs:complexType>
     </xs:element>
 
-    <xs:complexType name="pet">
+    <xs:complexType name="Pet">
         <xs:sequence>
-        	<xs:element name="category" type="tns:category"/>
-            <xs:element name="name" type="xs:string"/>
-            <xs:element name="photoUrls" type="xs:string" maxOccurs="unbounded"/>
-            <xs:element name="tags" type="xs:string" maxOccurs="unbounded"/>
+        	<xs:element name="category" type="tns:Category" />
+        	<xs:element name="name" type="xs:string" />
+        	<xs:element name="photoUrls" type="xs:string"
+        		maxOccurs="unbounded" />
+
+        	<xs:element name="tags" type="tns:Tag"></xs:element>
+        	<xs:element name="status">
+        		<xs:simpleType>
+        			<xs:restriction base="xs:string">
+        				<xs:enumeration value="available"></xs:enumeration>
+        				<xs:enumeration value="pending"></xs:enumeration>
+        				<xs:enumeration value="sold"></xs:enumeration>
+        			</xs:restriction>
+        		</xs:simpleType>
+        	</xs:element>
         </xs:sequence>
     </xs:complexType>
     
-    <xs:complexType name="category">
+    <xs:complexType name="Category">
         <xs:sequence>
         	<xs:element name="id" type="xs:int"/>
             <xs:element name="name" type="xs:string"/>
         </xs:sequence>
     </xs:complexType>
     
+    <xs:complexType name="Tag">
+    	<xs:sequence>
+    		<xs:element name="id" type="xs:int"></xs:element>
+    		<xs:element name="name" type="xs:string"></xs:element>
+    	</xs:sequence>
+    </xs:complexType>
 
+    <xs:complexType name="Order">
+    	<xs:sequence>
+    		<xs:element name="id" type="xs:int"></xs:element>
+    		<xs:element name="petId" type="xs:int"></xs:element>
+    		<xs:element name="quantity" type="xs:int"></xs:element>
+    		<xs:element name="shipDate" type="xs:dateTime"></xs:element>
+    		<xs:element name="status">
+    			<xs:simpleType>
+    				<xs:restriction base="xs:string">
+    					<xs:enumeration value="placed"></xs:enumeration>
+    					<xs:enumeration value="approved"></xs:enumeration>
+    					<xs:enumeration value="delivered"></xs:enumeration>
+    				</xs:restriction>
+    			</xs:simpleType>
+    		</xs:element>
+    		<xs:element name="complete" type="xs:boolean"></xs:element>
+    	</xs:sequence>
+    </xs:complexType>
 
+    <xs:complexType name="User">
+    	<xs:sequence>
+    		<xs:element name="id" type="xs:int"></xs:element>
+    		<xs:element name="username" type="xs:string"></xs:element>
+    		<xs:element name="firstName" type="xs:string"></xs:element>
+    		<xs:element name="lastName" type="xs:string"></xs:element>
+    		<xs:element name="email" type="xs:string"></xs:element>
+    		<xs:element name="password" type="xs:string"></xs:element>
+    		<xs:element name="phone" type="xs:string"></xs:element>
+    		<xs:element name="userStatus" type="xs:int"></xs:element>
+    	</xs:sequence>
+    </xs:complexType>
 
+    <xs:complexType name="ApiResponse">
+    	<xs:sequence>
+    		<xs:element name="code" type="xs:int"></xs:element>
+    		<xs:element name="type" type="xs:string"></xs:element>
+    		<xs:element name="message" type="xs:string"></xs:element>
+    	</xs:sequence>
+    </xs:complexType>
 </xs:schema>
